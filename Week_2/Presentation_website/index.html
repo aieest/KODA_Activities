@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+  <!-- Section 1 -->
+  <section id="page-1" class="page">
+    <h1>Welcome to my presentation</h1>
+    <p>Now don't get me wrong. Throughout the first year of this campaign, against all predictions to the contrary, we saw how hungry the American people were for this message of unity. He strengthened my faith, officiated my wedding, and baptized my children. It will require a renewed sense of responsibility from each of us to recover what John F. I know there are differences on same-sex marriage, but surely we can agree that our gay and lesbian brothers and sisters deserve to visit the person they love in the hospital and to live lives free of discrimination.</p>
+    <div>
+      <a href="#page-2" class="btn">Next Page</a>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="page-2" class="page">
+    <h1>Page 2</h1>
+    <p>Now don't get me wrong. Throughout the first year of this campaign, against all predictions to the contrary, we saw how hungry the American people were for this message of unity. He strengthened my faith, officiated my wedding, and baptized my children. It will require a renewed sense of responsibility from each of us to recover what John F. I know there are differences on same-sex marriage, but surely we can agree that our gay and lesbian brothers and sisters deserve to visit the person they love in the hospital and to live lives free of discrimination.</p>
+    <div>
+      <a href="#page-1" class="btn-dark">Prev Page</a>
+      <a href="#page-3" class="btn">Next Page</a>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="page-3" class="page">
+    <h1>Page 3</h1>
+    <p>Now don't get me wrong. Throughout the first year of this campaign, against all predictions to the contrary, we saw how hungry the American people were for this message of unity. He strengthened my faith, officiated my wedding, and baptized my children. It will require a renewed sense of responsibility from each of us to recover what John F. I know there are differences on same-sex marriage, but surely we can agree that our gay and lesbian brothers and sisters deserve to visit the person they love in the hospital and to live lives free of discrimination.</p>
+    <div>
+      <a href="#page-2" class="btn-dark">Prev Page</a>
+      <a href="#page-4" class="btn">Next Page</a>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="page-4" class="page">
+    <h1>Page 4</h1>
+    <p>Now don't get me wrong. Throughout the first year of this campaign, against all predictions to the contrary, we saw how hungry the American people were for this message of unity. He strengthened my faith, officiated my wedding, and baptized my children. It will require a renewed sense of responsibility from each of us to recover what John F. I know there are differences on same-sex marriage, but surely we can agree that our gay and lesbian brothers and sisters deserve to visit the person they love in the hospital and to live lives free of discrimination.</p>
+    <div>
+      <a href="#page-3" class="btn-dark">Prev Page</a>
+      <a href="#page-1" class="btn">Back to Home</a>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script>
+    // Wrap your code in a document-ready function
+    $(document).ready(function() {
+      $('.btn').on('click', function(event) {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800
+        );
+      });
+    });
+  </script>
+</body>
+</html>
